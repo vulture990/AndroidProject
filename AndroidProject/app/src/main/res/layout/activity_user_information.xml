@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserInformationActivity"
+    android:background="@drawable/user_information">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userinfo"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:text="User Information"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:padding="2dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="-7dp" />
+
+    <EditText
+        android:id="@+id/fullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userinfo"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="206dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="#99413232"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="22dp"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fullName"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="#99413232"
+        android:drawableLeft="@drawable/ic_baseline_phone_24"
+        android:drawablePadding="22dp"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:padding="1dp">
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_weight="1"
+            android:background="#99413232"
+            android:drawableLeft="@drawable/ic_baseline_info_24"
+            android:drawablePadding="10dp"
+            android:hint="Age"
+            android:inputType="numberDecimal"
+            android:maxLength="100"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_weight="1"
+            android:background="#99413232"
+            android:drawableLeft="@drawable/ic_baseline_10k_24"
+            android:drawablePadding="10dp"
+            android:hint="Weight"
+            android:inputType="number"
+            android:padding="12dp"
+            android:text="Weight"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_weight="1"
+            android:background="#99413232"
+            android:drawableLeft="@drawable/ic_baseline_height_24"
+            android:drawablePadding="10dp"
+            android:hint="Height"
+            android:inputType="number"
+            android:padding="12dp"
+            android:text="Height"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearlayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal"
+        android:padding="1dp">
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/gender"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="12dp"-->
+        <!--            android:layout_marginTop="1dp"-->
+        <!--            android:layout_marginEnd="17dp"-->
+        <!--            android:layout_marginBottom="12dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:background="#99413232"-->
+        <!--            android:drawableLeft="@drawable/ic_baseline_wc_24"-->
+        <!--            android:drawablePadding="8dp"-->
+        <!--            android:hint="Gender"-->
+        <!--            android:maxLength="100"-->
+        <!--            android:padding="12dp"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textColorHint="@color/white" />-->
+
+        <!--        <RadioGroup-->
+        <!--            android:id="@+id/radioGroup"-->
+        <!--            android:layout_width="260dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            >-->
+
+        <!--            <RadioButton-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_margin="1dp"-->
+        <!--                android:layout_marginLeft="10dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:background="#99413232"-->
+        <!--                android:text="Male"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textColorHint="@color/white" />-->
+
+        <!--            <RadioButton-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_margin="1dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:background="#99413232"-->
+        <!--                android:text="Female"-->
+        <!--                android:textColor="@color/white"-->
+        <!--                android:textColorHint="@color/white" />-->
+        <!--        </RadioGroup>-->
+
+        <TextView
+            android:id="@+id/editTextAmount"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="#99413232"
+            android:drawableLeft="@drawable/ic_baseline_wc_24"
+            android:drawablePadding="22dp"
+            android:ems="10"
+            android:padding="14dp"
+            android:text="Gender"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+             />
+
+        <Spinner
+            android:id="@+id/genderSpinner"
+            android:layout_width="155dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_weight="1"
+            android:background="#99413232"
+            android:padding="12dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
