@@ -1,3 +1,0 @@
-# AndroidProject
-
-By : Adnane Slimani
