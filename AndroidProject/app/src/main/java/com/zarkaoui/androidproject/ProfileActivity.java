@@ -4,11 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ProfileActivity extends AppCompatActivity {
+import com.zarkaoui.androidproject.databinding.ActivityDrawerBaseBinding;
+import com.zarkaoui.androidproject.databinding.ActivityProfileBinding;
+
+public class ProfileActivity extends DrawerBaseActivity {
+
+    ActivityProfileBinding activityProfileBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        activityProfileBinding = ActivityProfileBinding.inflate(getLayoutInflater());
+
+        setContentView(activityProfileBinding.getRoot());
+        activityTitle("Profile");
     }
 }

@@ -3,14 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProjects/AndroidProject/AndroidProject/app/src/main/res/layout/activity_forget_password.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/layout/activity_dashboard.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/layout/activity_drawer_base.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/layout/activity_forget_password.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/layout/activity_nutrition.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/layout/activity_user_information.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/layout/content_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/layout/main_drawer_header.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/layout/spinner_simple.xml" value="0.19010416666666666" />
+        <entry key="..\:/AndroidStudioProjects/AndroidProject2/app/src/main/res/menu/main_drawer_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

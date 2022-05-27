@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidProject">
         <activity
+            android:name=".NutritionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DrawerBaseActivity"
+            android:exported="false" />
+        <activity
             android:name=".ForgetPasswordActivity"
             android:exported="false" />
         <activity
@@ -20,11 +29,6 @@
         <activity
             android:name=".RegisterActivity"
             android:exported="false"
-            android:parentActivityName=".LoginActivity" />
-        <activity
-            android:name=".UserInformationActivity"
-            android:exported="false"
-            android:label="User Information"
             android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".LoginActivity"

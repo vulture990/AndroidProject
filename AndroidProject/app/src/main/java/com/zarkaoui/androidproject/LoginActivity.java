@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
     public  void navigateToSecondActivity(){
         finish();
-        Intent intent = new Intent(this, UserInformationActivity.class);
+        Intent intent = new Intent(this, DashboardActivity.class);
         startActivity(intent);
     }
 
@@ -158,7 +158,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if(user.isEmailVerified()){
                         //redirect to profile
-                        startActivity(new Intent(LoginActivity.this, ProfileActivity.class));
+                        startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
                     } else {
                         user.sendEmailVerification();
                         Toast.makeText(LoginActivity.this, "Check your email for verification", Toast.LENGTH_LONG).show();
