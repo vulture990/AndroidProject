@@ -33,12 +33,24 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private TextView register;
 
+<<<<<<< HEAD
 
     private MaterialButton loginBtn;
 
     private ProgressBar progressBar;
 
 
+=======
+    private EditText editTextUsername;
+    private EditText editTextPassword;
+
+    private MaterialButton loginBtn;
+
+    private FirebaseAuth mAuth;
+    private ProgressBar progressBar;
+
+    private TextView forgotPassword;
+>>>>>>> e09898cbf5a5d87c6e97b63cf2449a5a9b454c14
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +61,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         //Register :
         register = (TextView) findViewById(R.id.register);
         register.setOnClickListener(this);
+<<<<<<< HEAD
 
 
         loginBtn = (MaterialButton) findViewById(R.id.loginBtn);
@@ -58,6 +71,22 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
 
+=======
+
+
+        loginBtn = (MaterialButton) findViewById(R.id.loginBtn);
+        loginBtn.setOnClickListener(this);
+
+        editTextUsername = (EditText) findViewById(R.id.username);
+        editTextPassword = (EditText) findViewById(R.id.password);
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+        mAuth = FirebaseAuth.getInstance();
+
+        forgotPassword = (TextView) findViewById(R.id.forgotPassword);
+        forgotPassword.setOnClickListener(this);
+>>>>>>> e09898cbf5a5d87c6e97b63cf2449a5a9b454c14
 
         //Google Sign in :
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
@@ -104,8 +133,71 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.register:
                 startActivity(new Intent(this, RegisterActivity.class));
                 break;
+<<<<<<< HEAD
         }
     }
 
 
+=======
+            case R.id.loginBtn:
+                userLogin();
+                break;
+            case R.id.forgotPassword:
+                startActivity(new Intent(this, ForgetPasswordActivity.class));
+                break;
+        }
+    }
+
+    private void userLogin() {
+        String username = editTextUsername.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
+
+        if(username.isEmpty()){
+            editTextUsername.setError("Email is required!");
+            editTextUsername.requestFocus();
+            return;
+        }
+
+        if(!Patterns.EMAIL_ADDRESS.matcher(username).matches()){
+            editTextUsername.setError("Please provide a valid email");
+            editTextUsername.requestFocus();
+            return;
+        }
+
+        if(password.isEmpty()){
+            editTextPassword.setError("Password is required!");
+            editTextPassword.requestFocus();
+            return;
+        }
+
+        if(password.length() < 8){
+            editTextPassword.setError("Min password length should be 8 characters!");
+            editTextPassword.requestFocus();
+            return;
+        }
+
+        progressBar.setVisibility(View.VISIBLE);
+
+        mAuth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                    if(user.isEmailVerified()){
+                        //redirect to profile
+                        startActivity(new Intent(LoginActivity.this, ProfileActivity.class));
+                    } else {
+                        user.sendEmailVerification();
+                        Toast.makeText(LoginActivity.this, "Check your email for verification", Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                    }
+
+                } else {
+                    Toast.makeText(LoginActivity.this, "Failed to login! try again", Toast.LENGTH_LONG).show();
+                    progressBar.setVisibility(View.GONE);
+                }
+            }
+        });
+    }
+>>>>>>> e09898cbf5a5d87c6e97b63cf2449a5a9b454c14
 }
